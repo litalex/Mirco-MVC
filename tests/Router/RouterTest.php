@@ -5,7 +5,7 @@
 
 class RouterTest extends PHPUnit_Framework_TestCase {
 
-    public function testGetControllername() {
+    public function testGetControllerName() {
         $server = array(
             'REQUEST_URI' => '/foo/bar'
         );
@@ -18,7 +18,7 @@ class RouterTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('foo', $router->getControllerNname());
     }
 
-    public function testGetActionname() {
+    public function testGetActionName() {
         $server = array(
             'REQUEST_URI' => '/foo/bar'
         );

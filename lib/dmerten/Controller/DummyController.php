@@ -8,4 +8,8 @@ namespace dmerten\Controller;
 
 class DummyController extends Controller {
 
+
+    public function indexAction() {
+        var_dump("Hello World!");
+    }
 }

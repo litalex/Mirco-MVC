@@ -4,17 +4,39 @@ namespace dmerten;
  * @author Dirk Merten
  */
 
+/**
+ * Class Request
+ * @package dmerten
+ */
 class Request {
 
+    /**
+     * @var array
+     */
     private $get;
 
+    /**
+     * @var array
+     */
     private $post;
 
+    /**
+     * @var array
+     */
     private $cookies;
 
+    /**
+     * @var array
+     */
     private $server;
 
 
+    /**
+     * @param array $get
+     * @param array $post
+     * @param array $cookies
+     * @param array $server
+     */
     public function __construct(array $get, array $post, array $cookies, array $server) {
         $this->get = $get;
         $this->post = $post;

@@ -42,7 +42,7 @@ class ControllerFactory {
 
     /**
      * @param $name
-     * @return mixed
+     * @return Controller
      */
     public function getControllerByName($name) {
         $name = $this->nameSpace . ucfirst($name) . self::CONTROLLER_NAME_POSTFIX;

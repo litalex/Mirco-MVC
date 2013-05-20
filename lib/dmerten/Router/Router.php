@@ -16,18 +16,14 @@ class Router {
 
     const DEFAULT_CONTROLLER_NAME = 'Index';
     const DEFAULT_ACTION_NAME = 'Index';
-
     /**
      * @var \dmerten\Request
      */
     private $request;
-
-
     /**
      * @var DispatchResult
      */
     private $dispatchResult = null;
-
 
     /**
      * @param Request $request
@@ -35,7 +31,6 @@ class Router {
     public function __construct(Request $request) {
         $this->request = $request;
     }
-
 
     public function getControllerNname() {
         $this->dispatchRequest();

@@ -46,11 +46,17 @@ class Router {
         $this->defaultControllerName = $defaultControllerName ? $defaultControllerName : self::DEFAULT_CONTROLLER_NAME;
     }
 
+    /**
+     * @return string
+     */
     public function getControllerName() {
         $this->dispatchRequest();
         return $this->dispatchResult->getControllerName();
     }
 
+    /**
+     * @return DispatchResult|null
+     */
     private function dispatchRequest() {
 
         if ($this->dispatchResult === null) {
@@ -86,11 +92,17 @@ class Router {
 
     }
 
+    /**
+     * @return string
+     */
     public function getActionName() {
         $this->dispatchRequest();
         return $this->dispatchResult->getActionName();
     }
 
+    /**
+     * @return DispatchResult|null
+     */
     public function getDispatchResult() {
         return $this->dispatchResult;
     }

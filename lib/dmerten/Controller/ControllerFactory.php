@@ -45,7 +45,7 @@ class ControllerFactory {
      * @return Controller
      */
     public function getControllerByName($name) {
-        $name = $this->nameSpace . ucfirst($name) . self::CONTROLLER_NAME_POSTFIX;
+        $name = $this->nameSpace . '\\' . ucfirst($name) . self::CONTROLLER_NAME_POSTFIX;
         $controller = new $name($this->request, $this->response);
 
         return $controller;

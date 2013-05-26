@@ -34,6 +34,10 @@ abstract class Controller {
         $this->response = $response;
     }
 
+    /**
+     * @param $action
+     * @throws \BadMethodCallException
+     */
     public function runAction($action) {
         $method = strtolower($action) . 'Action';
         if (!method_exists($this, $method)) {

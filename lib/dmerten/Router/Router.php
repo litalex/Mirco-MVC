@@ -26,10 +26,24 @@ class Router {
     private $dispatchResult = null;
 
     /**
-     * @param Request $request
+     * @var string
      */
-    public function __construct(Request $request) {
+    private $webRoot = '';
+
+    /**
+     * @var string
+     */
+    private $defaultControllerName = '';
+
+    /**
+     * @param Request $request
+     * @param $webRoot
+     * @param string $defaultControllerName
+     */
+    public function __construct(Request $request, $webRoot, $defaultControllerName = '') {
         $this->request = $request;
+        $this->webRoot = $webRoot;
+        $this->defaultControllerName = $defaultControllerName ? $defaultControllerName : self::DEFAULT_CONTROLLER_NAME;
     }
 
     public function getControllerNname() {
@@ -42,12 +56,18 @@ class Router {
         if ($this->dispatchResult === null) {
 
             $this->dispatchResult = new DispatchResult();
-            $this->dispatchResult->setControllerName(self::DEFAULT_CONTROLLER_NAME);
+            $this->dispatchResult->setControllerName($this->defaultControllerName);
             $this->dispatchResult->setActionName(self::DEFAULT_ACTION_NAME);
 
+            $requestUri = $this->request->getRequestUri();
+            if ($requestUri) {
 
-            if ($this->request->getRequestUri()) {
-                $parts = explode('/', $this->request->getRequestUri());
+                if (strpos($requestUri, $this->webRoot) === 0) {
+                    $length = strlen($this->webRoot);
+                    $requestUri = substr($requestUri, $length);
+                }
+
+                $parts = explode('/', $requestUri);
 
                 if (is_array($parts) && !empty($parts)) {
 

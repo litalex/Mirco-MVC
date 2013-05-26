@@ -13,7 +13,7 @@ $router = new \dmerten\Router\Router($request, '/dispatcher/demo', 'Dummy');
 
 $controllerFactory = new \dmerten\Controller\ControllerFactory('\\dmerten\\Controller', $request, $response);
 
-$controller = $controllerFactory->getControllerByName($router->getControllerNname());
+$controller = $controllerFactory->getControllerByName($router->getControllerName());
 $controller->runAction($router->getActionName());
 
 var_dump($response);

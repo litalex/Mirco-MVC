@@ -12,10 +12,9 @@ class RouterTest extends PHPUnit_Framework_TestCase {
 
         $request = new dmerten\Request(array(), array(), array(), $server);
 
+        $router = new \dmerten\Router\Router($request, '/', 'Dummy');
 
-        $router = new \dmerten\Router\Router($request);
-
-        $this->assertEquals('foo', $router->getControllerNname());
+        $this->assertEquals('foo', $router->getControllerName());
     }
 
     public function testGetActionName() {
@@ -25,7 +24,7 @@ class RouterTest extends PHPUnit_Framework_TestCase {
 
         $request = new dmerten\Request(array(), array(), array(), $server);
 
-        $router = new \dmerten\Router\Router($request);
+        $router = new \dmerten\Router\Router($request, '/', 'Dummy');
 
         $this->assertEquals('bar', $router->getActionName());
 

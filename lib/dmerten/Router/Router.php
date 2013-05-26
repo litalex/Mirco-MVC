@@ -46,7 +46,7 @@ class Router {
         $this->defaultControllerName = $defaultControllerName ? $defaultControllerName : self::DEFAULT_CONTROLLER_NAME;
     }
 
-    public function getControllerNname() {
+    public function getControllerName() {
         $this->dispatchRequest();
         return $this->dispatchResult->getControllerName();
     }
@@ -71,11 +71,11 @@ class Router {
 
                 if (is_array($parts) && !empty($parts)) {
 
-                    if (!empty($parts[1])) {
-                        $this->dispatchResult->setControllerName($parts[1]);
+                    if (!empty($parts[0])) {
+                        $this->dispatchResult->setControllerName($parts[0]);
                     }
-                    if (!empty($parts[2])) {
-                        $this->dispatchResult->setActionName($parts[2]);
+                    if (!empty($parts[1])) {
+                        $this->dispatchResult->setActionName($parts[1]);
                     }
                 }
             }

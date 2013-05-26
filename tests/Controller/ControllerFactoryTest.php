@@ -7,7 +7,7 @@ class ControllerFactoryTest extends PHPUnit_Framework_TestCase {
 
     public function testGetControllerByName() {
         $request = new \dmerten\Request(array(), array(), array(), array());
-        $controllerFactory = new \dmerten\Controller\ControllerFactory('dmerten\\Controller\\', $request, new \dmerten\Response());
+        $controllerFactory = new \dmerten\Controller\ControllerFactory('\\dmerten\\Controller', $request, new \dmerten\Response());
 
         $controller = $controllerFactory->getControllerByName('Dummy');
 

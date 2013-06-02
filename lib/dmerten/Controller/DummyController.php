@@ -10,6 +10,6 @@ class DummyController extends Controller {
 
 
     public function indexAction() {
-        var_dump("Hello World!");
+        $this->response->set('content', 'Hello World');
     }
 }

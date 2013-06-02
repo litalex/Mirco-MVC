@@ -16,4 +16,5 @@ $controllerFactory = new \dmerten\Controller\ControllerFactory('\\dmerten\\Contr
 $controller = $controllerFactory->getControllerByName($router->getControllerName());
 $controller->runAction($router->getActionName());
 
-var_dump($response);
+$view = new \dmerten\View\View('view/' . $router->getControllerName() . '/' . $router->getActionName() . '.phtml', $response);
+$view->render();

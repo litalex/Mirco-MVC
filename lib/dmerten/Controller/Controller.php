@@ -18,12 +18,12 @@ abstract class Controller {
     /**
      * @var \dmerten\Request
      */
-    private $request;
+    protected $request;
 
     /**
      * @var \dmerten\Response
      */
-    private $response;
+    protected $response;
 
     /**
      * @param Request $request

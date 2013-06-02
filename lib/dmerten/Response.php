@@ -28,10 +28,11 @@ class Response {
 
     /**
      * @param $key
+     * @param string $default
      * @return mixed
      */
-    public function get($key) {
-        return $this->data[$key];
+    public function get($key, $default = '') {
+        return isset($this->data[$key]) ? $this->data[$key] : $default;
     }
 
 }

@@ -5,7 +5,7 @@
 
 
 spl_autoload_register(function ($class) {
-    if (strpos($class, 'dmerten') === 0) {
+    if (strpos($class, 'mmvc') === 0) {
         $base = dirname(dirname(__FILE__));
         $path = str_replace('\\', '/', $class);
         include $base . '/lib/' . $path . '.php';

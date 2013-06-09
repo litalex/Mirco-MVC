@@ -3,10 +3,10 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\View;
+namespace mmvc\View;
 
 
-use dmerten\Response;
+use mmvc\Response;
 
 class View {
 

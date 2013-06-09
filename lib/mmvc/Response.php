@@ -3,12 +3,12 @@
  * @author Dirk Merten
  */
 
-namespace dmerten;
+namespace mmvc;
 
 
 /**
  * Class Response
- * @package dmerten
+ * @package mmvc
  */
 class Response {
 

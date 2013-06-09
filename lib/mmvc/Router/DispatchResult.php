@@ -3,12 +3,12 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\Router;
+namespace mmvc\Router;
 
 
 /**
  * Class DispatchResult
- * @package dmerten\Router
+ * @package mmvc\Router
  */
 class DispatchResult {
 

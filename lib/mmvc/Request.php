@@ -1,12 +1,12 @@
 <?php
-namespace dmerten;
-/**
- * @author Dirk Merten
- */
+namespace mmvc;
+    /**
+     * @author Dirk Merten
+     */
 
 /**
  * Class Request
- * @package dmerten
+ * @package mmvc
  */
 class Request {
 

@@ -3,21 +3,21 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\Router;
+namespace mmvc\Router;
 
 
-use dmerten\Request;
+use mmvc\Request;
 
 /**
  * Class Router
- * @package dmerten\Router
+ * @package mmvc\Router
  */
 class Router {
 
     const DEFAULT_CONTROLLER_NAME = 'Index';
     const DEFAULT_ACTION_NAME = 'Index';
     /**
-     * @var \dmerten\Request
+     * @var \mmvc\Request
      */
     private $request;
     /**

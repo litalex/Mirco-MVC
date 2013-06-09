@@ -6,7 +6,7 @@
 class RequestTest extends PHPUnit_Framework_TestCase {
 
     public function testGetter() {
-        $request = new dmerten\Request(array('getfoo' => 'barget'), array('postfoo' => 'barpost'), array('cookiesfoo' => 'barcookies'), array('serverfoo' => 'barcookies'));
+        $request = new mmvc\Request(array('getfoo' => 'barget'), array('postfoo' => 'barpost'), array('cookiesfoo' => 'barcookies'), array('serverfoo' => 'barcookies'));
 
         $this->assertEquals('barget', $request->getGet('getfoo'));
         $this->assertEquals('barpost', $request->getPost('postfoo'));

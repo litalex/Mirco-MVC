@@ -3,7 +3,7 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\Controller;
+namespace mmvc\Controller;
 
 
 class DummyController extends Controller {

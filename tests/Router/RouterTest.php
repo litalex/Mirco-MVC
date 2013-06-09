@@ -10,9 +10,9 @@ class RouterTest extends PHPUnit_Framework_TestCase {
             'REQUEST_URI' => '/foo/bar'
         );
 
-        $request = new dmerten\Request(array(), array(), array(), $server);
+        $request = new mmvc\Request(array(), array(), array(), $server);
 
-        $router = new \dmerten\Router\Router($request, '/', 'Dummy');
+        $router = new \mmvc\Router\Router($request, '/', 'Dummy');
 
         $this->assertEquals('foo', $router->getControllerName());
     }
@@ -22,9 +22,9 @@ class RouterTest extends PHPUnit_Framework_TestCase {
             'REQUEST_URI' => '/foo/bar'
         );
 
-        $request = new dmerten\Request(array(), array(), array(), $server);
+        $request = new mmvc\Request(array(), array(), array(), $server);
 
-        $router = new \dmerten\Router\Router($request, '/', 'Dummy');
+        $router = new \mmvc\Router\Router($request, '/', 'Dummy');
 
         $this->assertEquals('bar', $router->getActionName());
 

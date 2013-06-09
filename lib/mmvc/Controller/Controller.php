@@ -3,25 +3,25 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\Controller;
+namespace mmvc\Controller;
 
 
-use dmerten\Request;
-use dmerten\Response;
+use mmvc\Request;
+use mmvc\Response;
 
 /**
  * Class Controller
- * @package dmerten\Controller
+ * @package mmvc\Controller
  */
 abstract class Controller {
 
     /**
-     * @var \dmerten\Request
+     * @var \mmvc\Request
      */
     protected $request;
 
     /**
-     * @var \dmerten\Response
+     * @var \mmvc\Response
      */
     protected $response;
 

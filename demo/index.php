@@ -6,15 +6,15 @@ set_include_path(dirname(dirname(__FILE__)) . '/lib');
 
 include '../inc/autloader.php';
 
-$request = new \dmerten\Request($_GET, $_POST, $_COOKIE, $_SERVER);
-$response = new \dmerten\Response();
+$request = new \mmvc\Request($_GET, $_POST, $_COOKIE, $_SERVER);
+$response = new \mmvc\Response();
 
-$router = new \dmerten\Router\Router($request, '/dispatcher/demo', 'Dummy');
+$router = new \mmvc\Router\Router($request, '/dispatcher/demo', 'Dummy');
 
-$controllerFactory = new \dmerten\Controller\ControllerFactory('\\dmerten\\Controller', $request, $response);
+$controllerFactory = new \mmvc\Controller\ControllerFactory('\\mmvc\\Controller', $request, $response);
 
 $controller = $controllerFactory->getControllerByName($router->getControllerName());
 $controller->runAction($router->getActionName());
 
-$view = new \dmerten\View\View('view/' . $router->getControllerName() . '/' . $router->getActionName() . '.phtml', $response);
+$view = new \mmvc\View\View('view/' . $router->getControllerName() . '/' . $router->getActionName() . '.phtml', $response);
 $view->render();

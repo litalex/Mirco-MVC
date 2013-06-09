@@ -3,27 +3,27 @@
  * @author Dirk Merten
  */
 
-namespace dmerten\Controller;
+namespace mmvc\Controller;
 
 
-use dmerten\Request;
-use dmerten\Response;
+use mmvc\Request;
+use mmvc\Response;
 
 /**
  * Class ControllerFactory
- * @package dmerten\Controller
+ * @package mmvc\Controller
  */
 class ControllerFactory {
 
     const CONTROLLER_NAME_POSTFIX = 'Controller';
 
     /**
-     * @var \dmerten\Request
+     * @var \mmvc\Request
      */
     private $request;
 
     /**
-     * @var \dmerten\Response
+     * @var \mmvc\Response
      */
     private $response;
 
